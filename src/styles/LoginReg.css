@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.login-reg-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../images/food-bg.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login-reg-container::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.1));
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.input-container {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.input-container input {
+    width: 100%;
+    height:40px;
+    border-radius:1rem;
+    border: 2px solid orangered;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-indent: 1rem;
+    transition: 0.2s ease-in-out;
+    color: whitesmoke;
+}
+
+.input-container input:focus {
+    box-shadow: 0 0 5px 2px orangered;
+    outline: orangered;
+}
+
+.highlighted-text {
+    display: inline-block;
+    font-weight: 700;
+    background-image: linear-gradient(to top, red, orangered);
+    background-clip: text;
+    color: transparent
+}
+
+.app-footer {
+    display: block;
+    bottom: 0;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+}
+@media screen and (max-width:480px) {
+    .app-footer {
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        background-image: linear-gradient(to top, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2));
+    }
+}
+@media screen and (max-width:912px){
+    .login-reg-container {
+        background-image: url('../images/food-bg.jpg');
+    }
+}

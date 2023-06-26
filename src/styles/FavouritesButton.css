@@ -1,0 +1,107 @@
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-transition: 100ms;
+    transition: 100ms;
+  }
+  
+  .checkmark {
+    top: 0;
+    left: 0;
+    height: 1em;
+    width: 1em;
+    -webkit-transition: 100ms;
+    transition: 100ms;
+    -webkit-animation: dislike_effect 400ms ease;
+            animation: dislike_effect 400ms ease;
+  }
+  
+  .container input:checked ~ .checkmark path {
+    fill:#FF5353;
+    stroke-width: 0;
+  }
+  .container input:checked ~ .checkmark{
+    -webkit-animation: like_effect 400ms ease;
+            animation: like_effect 400ms ease;
+  }
+  
+  .container:hover{
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  
+  @-webkit-keyframes like_effect{
+    0%{
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
+    50%{
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2);
+    }
+    100%{
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  
+  @keyframes like_effect{
+    0%{
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
+    50%{
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2);
+    }
+    100%{
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  
+  @-webkit-keyframes dislike_effect{
+    0%{
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
+    50%{
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2);
+    }
+    100%{
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  
+  @keyframes dislike_effect{
+    0%{
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
+    50%{
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2);
+    }
+    100%{
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }

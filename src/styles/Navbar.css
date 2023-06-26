@@ -1,0 +1,68 @@
+#navbar {position: relative;
+    width: 100%;
+    height: fit-content;
+    padding: 5px;
+    background-color: rgb(30, 30, 30);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar ul {
+    display: flex;
+    align-self: center;
+    column-gap: 1rem;
+    margin-left: 2rem;
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+    list-style-type: none;
+}
+
+.logo-container {
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.MuiMenu-list {
+    background-color: rgb(30, 30, 30);
+}
+#mobile-menu-icon {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    margin-left: 1rem;
+}
+.MuiMenuItem-root {
+    display: flex !important;
+    justify-content: space-between !important;
+}
+#logo-container {
+    width: 80px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    margin-right: 4rem;
+}
+
+@media screen and (max-width: 520px) {
+    #mobile-menu-icon {
+        display: block;
+    }
+    #logo-container {
+        margin-right: initial;
+    }
+    .options {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width:800px) {
+    #logo-container {
+        margin-right: initial;
+    }
+}

@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+#main-page-container {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    background-image: url('../images/main-page-bg.jpg');
+    background-size: cover;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    flex-basis: 1 0 50%;
+    justify-content: space-between;
+    align-items: center;
+}
+.greeting-text-container {
+    width: 400px;
+    height: 300px;
+    margin-left: 5%;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 2rem;
+}
+
+.static-food-images-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+    margin-right: 5%;
+    top: -50px;
+    transform: rotateZ(-30deg);
+    gap: 2rem;
+    border-radius: 100%;
+    background-color: rgba(255, 68, 0, 0.8);
+}
+
+.greeting-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    background-image: linear-gradient(to top, orangered, orange);
+    background-clip: text;
+    color: transparent
+}
+
+.image-container {
+    width: 40%;
+}
+.image-container img {
+    width: 100%;
+    object-fit: contain;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.cuisines-container {
+    margin-top: 1%;
+    width: auto;
+    height: auto;
+}
+.search-results-section {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(30, 30, 30);
+}
+.searching-pagination-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    margin: 1%;
+}
+.result-section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 0 0 20px 0;
+}
+@media screen and (max-width:750px) {
+    #main-page-container {
+        height: 650px;
+    }
+    .greeting-text, .static-food-images-container {
+        width: 90%;
+        justify-self: center;
+        margin-inline: 5%;
+        justify-content: center;
+    }
+    .greeting-text {
+        text-align: center;
+    }
+    .static-food-images-container {
+        width: 75%;
+    }
+    .image-container {
+        width: 42%;
+    }
+    #custom-pagination {
+        margin-inline: 5%;
+    }
+}
