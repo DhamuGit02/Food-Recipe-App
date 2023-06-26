@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.listen(9000, () => console.log('database server running on port 9000'))
 
 async function connectToMongoDB() {
-    const uri = "mongodb+srv://Dhamu02:Dhamu_2002@cluster0.vwz9a1d.mongodb.net/homechefdb?retryWrites=true&w=majority";
+    const uri = "YOUR_MONGODB_URL";
 
     await mongoose.connect(uri)
     console.log('Connected to MongoDB Atlas')
