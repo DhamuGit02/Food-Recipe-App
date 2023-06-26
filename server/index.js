@@ -3,8 +3,8 @@ const express = require('express')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const axios = require('axios')
-const apiKey = "7e72c94189d44e3eaefb39302d95df37"   //account 2 active
-const bearer_token = "d0cfed810f94cf5349a479a56bb7e2a4cd4d79a6"
+const apiKey = "YOUR_API_KEY"   
+const bearer_token = "YOUR_API_KEY"
 const fs = require("fs")
 const path = require("path")
 const multer = require("multer")
@@ -145,10 +145,6 @@ app.get("/api/get-recipe-information/:id", async (req, res) => {
 
 app.post("/api/analyze", upload.single("file"), async (req, res) => {
     try {
-        // const resizer = new Resizer.default(req.file, 512)
-        // resizer.resizeImage().then((value) => {
-        //     fs.createWriteStream(`./temp/${req.file.filename}`)
-        // })
         console.log(req.file.filename)
         let data = new FormData();
         data.append('image', fs.createReadStream(req.file.path));
@@ -213,7 +209,6 @@ app.post('/api/signup', async (req, res) => {
         res.sendStatus(500)
         console.log(error)
     }
-    // res.sendStatus(200)
 })
 
 app.post('/api/signin', async (req, res) => {
@@ -288,12 +283,4 @@ app.post("/api/delete-recipe-from-favourites", async (req, res) => {
         res.sendStatus(500)
         console.log(error)
     }
-})
-
-//Testing --------------------------------------
-app.get("/test", async (req, res) => {
-    try {
-        const response = await axios.get("https://api.spoonacular.com/recipes/64779/information?instructionsRequired=true&apiKey=7e72c94189d44e3eaefb39302d95df37&includeNutrition=true&number=1")
-        return res.json(response.data.nutrition.nutrients)
-    } catch (err) { }
 })
